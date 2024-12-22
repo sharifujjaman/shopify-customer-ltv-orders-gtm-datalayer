@@ -1,0 +1,575 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2024-12-22 17:49:31",
+    "containerVersion": {
+        "path": "accounts/6060323614/containers/202316062/versions/0",
+        "accountId": "6060323614",
+        "containerId": "202316062",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6060323614/containers/202316062",
+            "accountId": "6060323614",
+            "containerId": "202316062",
+            "name": "temp - server",
+            "publicId": "GTM-M5F4XL8M",
+            "usageContext": [
+                "SERVER"
+            ],
+            "fingerprint": "1734445168916",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6060323614/containers/202316062/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": true,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": true
+            },
+            "tagIds": [
+                "GTM-M5F4XL8M"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "tagId": "32",
+                "name": "CM - Set Cookie order_count & total_spent",
+                "type": "cvt_202316062_5",
+                "parameter": [
+                    {
+                        "type": "LIST",
+                        "key": "cookies",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "sgtm_orders_count"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{string - shopify customer - order_count}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "expiration",
+                                        "value": "7884000"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "domain",
+                                        "value": ".__replace_with_domain__"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "sameSite",
+                                        "value": "none"
+                                    },
+                                    {
+                                        "type": "BOOLEAN",
+                                        "key": "httpOnly",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "type": "BOOLEAN",
+                                        "key": "setEmpty",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "type": "BOOLEAN",
+                                        "key": "encodeValue",
+                                        "value": "false"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "sgtm_total_spent"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{string - shopify customer - total_spent}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "expiration",
+                                        "value": "7884000"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "domain",
+                                        "value": ".__replace_with_domain__"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "sameSite",
+                                        "value": "none"
+                                    },
+                                    {
+                                        "type": "BOOLEAN",
+                                        "key": "httpOnly",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "type": "BOOLEAN",
+                                        "key": "setEmpty",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "type": "BOOLEAN",
+                                        "key": "encodeValue",
+                                        "value": "false"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1734889655437",
+                "firingTriggerId": [
+                    "26"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "triggerId": "26",
+                "name": "dc - set_customer_data",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "set_customer_data"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Client Name}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Data Client"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1734786526382",
+                "parentFolderId": "3"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "variableId": "19",
+                "name": "ed - value",
+                "type": "ed",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "keyPath",
+                        "value": "value"
+                    }
+                ],
+                "fingerprint": "1734786627988",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "variableId": "20",
+                "name": "const - shopify access token",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "__replace_with_your_shopify_api__"
+                    }
+                ],
+                "fingerprint": "1734786660964",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "variableId": "21",
+                "name": "ed - user_id",
+                "type": "ed",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "keyPath",
+                        "value": "user_id"
+                    }
+                ],
+                "fingerprint": "1734786526382",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "variableId": "22",
+                "name": "http lookup > GET > customer",
+                "type": "cvt_202316062_7",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "logType",
+                        "value": "debug"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "jsonParse",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "headers",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "X-Shopify-Access-Token"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{const - shopify access token}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "Content-Type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "application/json"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "jsonParseKey",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "requestMethod",
+                        "value": "GET"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "storeResponse",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "url",
+                        "value": "https://__replace_with_shopify_url__.myshopify.com/admin/api/2024-01/customers/{{ed - user_id}}.json"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "requestTimeout",
+                        "value": "3000"
+                    }
+                ],
+                "fingerprint": "1734786606256",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "variableId": "23",
+                "name": "json > total_spent - customer.total_spent",
+                "type": "cvt_202316062_10",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "path",
+                        "value": "customer.total_spent"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "obj",
+                        "value": "{{http lookup > GET > customer}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "stringify",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1734786526382",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "variableId": "25",
+                "name": "string - shopify customer - total_spent",
+                "type": "cvt_202316062_6",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "entity",
+                        "value": "{{json > total_spent - customer.total_spent}}"
+                    }
+                ],
+                "fingerprint": "1734889709605",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "variableId": "27",
+                "name": "json > orders_count - customer.orders_count",
+                "type": "cvt_202316062_10",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "path",
+                        "value": "customer.orders_count"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "obj",
+                        "value": "{{http lookup > GET > customer}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "stringify",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1734786526382",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "variableId": "29",
+                "name": "string - shopify customer - order_count",
+                "type": "cvt_202316062_6",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "entity",
+                        "value": "{{json > orders_count - customer.orders_count}}"
+                    }
+                ],
+                "fingerprint": "1734889697771",
+                "parentFolderId": "3",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "folderId": "3",
+                "name": "Sh@rif",
+                "fingerprint": "1734445269087"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "type": "CLIENT_NAME",
+                "name": "Client Name"
+            }
+        ],
+        "fingerprint": "1734889771450",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6060323614/containers/202316062/versions/0?apiLink=version",
+        "customTemplate": [
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "templateId": "5",
+                "name": "Cookie Monster",
+                "fingerprint": "1734445269087",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"type\": \"TAG\",\n  \"id\": \"cvt_temp_public_id\",\n  \"__wm\": \"VGVtcGxhdGUtQXV0aG9yX0Nvb2tpZU1vbnN0ZXItU2ltby1BaGF2YQ\\u003d\\u003d\",\n  \"categories\": [\n    \"UTILITY\"\n  ],\n  \"version\": 1,\n  \"securityGroups\": [],\n  \"displayName\": \"Cookie Monster\",\n  \"brand\": {\n    \"id\": \"github.com_gtm-templates-simo-ahava\",\n    \"displayName\": \"gtm-templates-simo-ahava\",\n    \"thumbnail\": \"data:image/png;base64,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\\u003d\\u003d\"\n  },\n  \"description\": \"Use this tag to set browser cookies in the HTTP response. You can also configure the cookie to fetch its value from an existing 1st party cookie (if available).\",\n  \"containerContexts\": [\n    \"SERVER\"\n  ]\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"type\": \"PARAM_TABLE\",\n    \"name\": \"cookies\",\n    \"displayName\": \"Add Cookies To Set\",\n    \"paramTableColumns\": [\n      {\n        \"param\": {\n          \"type\": \"TEXT\",\n          \"name\": \"name\",\n          \"displayName\": \"Name\",\n          \"simpleValueType\": true,\n          \"valueValidators\": [\n            {\n              \"type\": \"NON_EMPTY\"\n            }\n          ]\n        },\n        \"isUnique\": true\n      },\n      {\n        \"param\": {\n          \"type\": \"TEXT\",\n          \"name\": \"value\",\n          \"displayName\": \"Value\",\n          \"simpleValueType\": true,\n          \"valueValidators\": [\n            {\n              \"type\": \"NON_EMPTY\",\n              \"enablingConditions\": [],\n              \"errorMessage\": \"\"\n            }\n          ]\n        },\n        \"isUnique\": false\n      },\n      {\n        \"param\": {\n          \"type\": \"TEXT\",\n          \"name\": \"expiration\",\n          \"displayName\": \"Expiration\",\n          \"simpleValueType\": true,\n          \"valueValidators\": [\n            {\n              \"type\": \"REGEX\",\n              \"args\": [\n                \"^|\\\\d+$\"\n              ],\n              \"errorMessage\": \"The value must be empty, 0, or a positive integer.\"\n            }\n          ],\n          \"valueUnit\": \"seconds\",\n          \"help\": \"Set the value to 0 to delete the cookie, leave the field empty to set a session cookie.\"\n        },\n        \"isUnique\": false\n      },\n      {\n        \"param\": {\n          \"type\": \"TEXT\",\n          \"name\": \"domain\",\n          \"displayName\": \"Domain\",\n          \"simpleValueType\": true,\n          \"defaultValue\": \"auto\",\n          \"valueValidators\": [\n            {\n              \"type\": \"NON_EMPTY\"\n            }\n          ]\n        },\n        \"isUnique\": false\n      },\n      {\n        \"param\": {\n          \"type\": \"SELECT\",\n          \"name\": \"sameSite\",\n          \"displayName\": \"SameSite\",\n          \"macrosInSelect\": false,\n          \"selectItems\": [\n            {\n              \"value\": \"lax\",\n              \"displayValue\": \"lax\"\n            },\n            {\n              \"value\": \"strict\",\n              \"displayValue\": \"strict\"\n            },\n            {\n              \"value\": \"none\",\n              \"displayValue\": \"none\"\n            }\n          ],\n          \"simpleValueType\": true\n        },\n        \"isUnique\": false\n      },\n      {\n        \"param\": {\n          \"type\": \"CHECKBOX\",\n          \"name\": \"httpOnly\",\n          \"checkboxText\": \"HttpOnly\",\n          \"simpleValueType\": true\n        },\n        \"isUnique\": false\n      },\n      {\n        \"param\": {\n          \"type\": \"CHECKBOX\",\n          \"name\": \"setEmpty\",\n          \"checkboxText\": \"Always set cookie\",\n          \"simpleValueType\": true,\n          \"help\": \"Check this box to set the cookie even if the value is an empty string.\"\n        },\n        \"isUnique\": false\n      },\n      {\n        \"param\": {\n          \"type\": \"CHECKBOX\",\n          \"name\": \"encodeValue\",\n          \"checkboxText\": \"Encode cookie value\",\n          \"simpleValueType\": true,\n          \"defaultValue\": true\n        },\n        \"isUnique\": false\n      }\n    ],\n    \"editRowTitle\": \"Edit Cookie\",\n    \"newRowButtonText\": \"Add Cookie\",\n    \"newRowTitle\": \"Add Cookie\"\n  }\n]\n\n\n___SANDBOXED_JS_FOR_SERVER___\n\n// Load template APIs\nconst setCookie = require('setCookie');\n\n// Create reference to param table\nconst cookies = data.cookies && data.cookies.length ? data.cookies : [];\n\n// Go through all the rows in the table and set each as a response cookie\ncookies.forEach(cookie => {\n  const name = cookie.name;\n  const value = cookie.value;\n  const options = {\n    domain: cookie.domain,\n    path: '/',\n    secure: true,\n    sameSite: cookie.sameSite\n  };\n  // Only set max-age if expiration is 0 or a positive integer\n  if (cookie.expiration !== '') options['max-age'] = cookie.expiration;\n  if (cookie.httpOnly) options.HttpOnly = cookie.httpOnly;\n  // Only set cookie if value is valid, or if value is empty and the relevant setting is checked\n  if (cookie.value || (cookie.value === '' && cookie.setEmpty)) {\n    setCookie(name, value, options, !cookie.encodeValue);\n  }\n});\n\ndata.gtmOnSuccess();\n\n\n___SERVER_PERMISSIONS___\n\n[\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"set_cookies\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"allowedCookies\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"name\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"domain\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"path\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"secure\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"session\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"*\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"*\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"*\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"secure\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"any\"\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  }\n]\n\n\n___TESTS___\n\nscenarios: []\n\n\n___NOTES___\n\nCreated on 26/03/2021, 10:04:45\n\n\n",
+                "galleryReference": {
+                    "host": "github.com",
+                    "owner": "gtm-templates-simo-ahava",
+                    "repository": "cookie-monster",
+                    "version": "1c84c0400083090e69406e3a2fa4b895c578104c",
+                    "signature": "9e700cce9dcd9a4a714132e3d14ad0c1fa1380195952e7fd37fe9f09dceb1608"
+                }
+            },
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "templateId": "6",
+                "name": "Convert to String",
+                "fingerprint": "1734445269090",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"type\": \"MACRO\",\n  \"id\": \"cvt_temp_public_id\",\n  \"version\": 1,\n  \"securityGroups\": [],\n  \"displayName\": \"Convert to String\",\n  \"categories\": [\n    \"UTILITY\"\n  ],\n  \"description\": \"Converts an entity of any type (string, number, boolean, null, undefined, Array, Object or Function) to a string.\",\n  \"containerContexts\": [\n    \"SERVER\"\n  ],\n  \"brand\": {\n    \"displayName\": \"giovaniortolani\",\n    \"id\": \"github.com_giovaniortolani\"\n  }\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"entity\",\n    \"displayName\": \"Reference to an entity to be stringified\",\n    \"simpleValueType\": true,\n    \"help\": \"Enter a reference to a variable that contains an entity to be stringified. This entity can be of any type (string, number, boolean, null, undefined, Array, Object or Function).\\n\\u003cbr\\u003e\\nIf you pass a Function as an entity, it will return \\u003ci\\u003eundefined\\u003c/i\\u003e.\\n\\u003cbr\\u003e\\nOtherwise, it will return the entity stringified.\",\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ],\n    \"alwaysInSummary\": true\n  }\n]\n\n\n___SANDBOXED_JS_FOR_SERVER___\n\nconst getType = require('getType');\nconst JSON = require('JSON');\nconst makeString = require('makeString');\n\nconst entity = data.entity;\nconst entityType = getType(entity);\nlet entityStringified;\n\nif (entityType === 'function') {\n  return;\n}\n\nif (entityType === 'object' || entityType === 'array') {\n  entityStringified = JSON.stringify(entity);\n} else {\n  entityStringified = makeString(entity);\n}\n\nreturn entityStringified;\n\n\n___TESTS___\n\nscenarios: []\n\n\n___NOTES___\n\nCreated on 3/28/2024, 6:30:28 PM\n\n\n",
+                "galleryReference": {
+                    "host": "github.com",
+                    "owner": "giovaniortolani",
+                    "repository": "convert-to-string-sgtm",
+                    "version": "7c58cca0e0eaefefa28d4c2f94d5377cb6f5d36f",
+                    "signature": "d685534100630cb151cbfde62dc174cac3e3b69e2ece92342727542586fcadcf"
+                }
+            },
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "templateId": "7",
+                "name": "HTTP Lookup",
+                "fingerprint": "1734445269091",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"type\": \"MACRO\",\n  \"id\": \"cvt_temp_public_id\",\n  \"version\": 1,\n  \"securityGroups\": [],\n  \"displayName\": \"HTTP Lookup\",\n  \"description\": \"Send JSON or Form-Data request to your URL and parse the response as JSON or string.\",\n  \"containerContexts\": [\n    \"SERVER\"\n  ],\n  \"brand\": {\n    \"displayName\": \"stape-io\",\n    \"id\": \"github.com_stape-io\"\n  }\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"type\": \"SELECT\",\n    \"name\": \"requestMethod\",\n    \"displayName\": \"Request Method\",\n    \"macrosInSelect\": false,\n    \"selectItems\": [\n      {\n        \"value\": \"GET\",\n        \"displayValue\": \"GET\"\n      },\n      {\n        \"value\": \"POST\",\n        \"displayValue\": \"POST\"\n      },\n      {\n        \"value\": \"PUT\",\n        \"displayValue\": \"PUT\"\n      }\n    ],\n    \"simpleValueType\": true,\n    \"defaultValue\": \"GET\",\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ],\n    \"alwaysInSummary\": true\n  },\n  {\n    \"type\": \"SELECT\",\n    \"name\": \"requestType\",\n    \"displayName\": \"Request Method\",\n    \"macrosInSelect\": false,\n    \"selectItems\": [\n      {\n        \"value\": \"json\",\n        \"displayValue\": \"JSON\"\n      },\n      {\n        \"value\": \"form\",\n        \"displayValue\": \"Form-Data\"\n      }\n    ],\n    \"simpleValueType\": true,\n    \"defaultValue\": \"json\",\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ],\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"requestMethod\",\n        \"paramValue\": \"GET\",\n        \"type\": \"NOT_EQUALS\"\n      }\n    ],\n    \"alwaysInSummary\": true\n  },\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"url\",\n    \"displayName\": \"Destination URL\",\n    \"simpleValueType\": true,\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ],\n    \"valueHint\": \"https://\"\n  },\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"simpleObject\",\n    \"checkboxText\": \"Do not use dot notation\",\n    \"simpleValueType\": true,\n    \"help\": \"By default, you can use dot notation to create a nested request object. \\nBut in case you need to create a property that contains a dot then you can use this option for that.\",\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"requestType\",\n        \"paramValue\": \"json\",\n        \"type\": \"EQUALS\"\n      }\n    ]\n  },\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"insideArray\",\n    \"checkboxText\": \"Put request object inside the array.\",\n    \"simpleValueType\": true,\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"requestType\",\n        \"paramValue\": \"json\",\n        \"type\": \"EQUALS\"\n      }\n    ]\n  },\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"jsonParse\",\n    \"checkboxText\": \"Parse response as JSON\",\n    \"simpleValueType\": true\n  },\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"storeResponse\",\n    \"checkboxText\": \"Store response in cache\",\n    \"simpleValueType\": true,\n    \"help\": \"Store the response in Template Storage. If all parameters of the request are the same response will be taken from the cache if it exists.\"\n  },\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"expirationTime\",\n    \"displayName\": \"Cache Expiration Time (Hours)\",\n    \"simpleValueType\": true,\n    \"help\": \"Will update cache if data is expired.\",\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"storeResponse\",\n        \"paramValue\": true,\n        \"type\": \"EQUALS\"\n      }\n    ],\n    \"valueValidators\": [\n      {\n        \"type\": \"POSITIVE_NUMBER\"\n      },\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ],\n    \"defaultValue\": 12\n  },\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"jsonParseKey\",\n    \"checkboxText\": \"Extract key from JSON object\",\n    \"simpleValueType\": true,\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"jsonParse\",\n        \"paramValue\": true,\n        \"type\": \"EQUALS\"\n      }\n    ],\n    \"subParams\": [\n      {\n        \"type\": \"TEXT\",\n        \"name\": \"jsonParseKeyName\",\n        \"displayName\": \"Key Name\",\n        \"simpleValueType\": true,\n        \"enablingConditions\": [\n          {\n            \"paramName\": \"jsonParseKey\",\n            \"paramValue\": true,\n            \"type\": \"EQUALS\"\n          }\n        ],\n        \"valueValidators\": [\n          {\n            \"type\": \"NON_EMPTY\"\n          }\n        ]\n      }\n    ]\n  },\n  {\n    \"type\": \"GROUP\",\n    \"name\": \"requestData\",\n    \"displayName\": \"Request Data\",\n    \"groupStyle\": \"ZIPPY_OPEN\",\n    \"subParams\": [\n      {\n        \"type\": \"LABEL\",\n        \"name\": \"start\",\n        \"displayName\": \"{\",\n        \"enablingConditions\": [\n          {\n            \"paramName\": \"requestType\",\n            \"paramValue\": \"json\",\n            \"type\": \"EQUALS\"\n          }\n        ]\n      },\n      {\n        \"type\": \"SIMPLE_TABLE\",\n        \"name\": \"data\",\n        \"simpleTableColumns\": [\n          {\n            \"defaultValue\": \"\",\n            \"displayName\": \"Property\",\n            \"name\": \"key\",\n            \"type\": \"TEXT\",\n            \"isUnique\": true\n          },\n          {\n            \"defaultValue\": \"\",\n            \"displayName\": \"Value\",\n            \"name\": \"value\",\n            \"type\": \"TEXT\"\n          }\n        ],\n        \"newRowButtonText\": \"Add Value\"\n      },\n      {\n        \"type\": \"LABEL\",\n        \"name\": \"end\",\n        \"displayName\": \"}\",\n        \"enablingConditions\": [\n          {\n            \"paramName\": \"requestType\",\n            \"paramValue\": \"json\",\n            \"type\": \"EQUALS\"\n          }\n        ]\n      }\n    ]\n  },\n  {\n    \"type\": \"GROUP\",\n    \"name\": \"requestHeaders\",\n    \"displayName\": \"Request Headers\",\n    \"groupStyle\": \"ZIPPY_CLOSED\",\n    \"subParams\": [\n      {\n        \"type\": \"SIMPLE_TABLE\",\n        \"name\": \"headers\",\n        \"simpleTableColumns\": [\n          {\n            \"defaultValue\": \"\",\n            \"displayName\": \"Key\",\n            \"name\": \"key\",\n            \"type\": \"TEXT\",\n            \"isUnique\": true\n          },\n          {\n            \"defaultValue\": \"\",\n            \"displayName\": \"Value\",\n            \"name\": \"value\",\n            \"type\": \"TEXT\"\n          }\n        ],\n        \"newRowButtonText\": \"Add Header\"\n      }\n    ]\n  },\n  {\n    \"type\": \"GROUP\",\n    \"name\": \"additionalOption\",\n    \"displayName\": \"Additional Options\",\n    \"groupStyle\": \"ZIPPY_CLOSED\",\n    \"subParams\": [\n      {\n        \"type\": \"TEXT\",\n        \"name\": \"requestTimeout\",\n        \"displayName\": \"Request Timeout\",\n        \"simpleValueType\": true,\n        \"defaultValue\": 3000,\n        \"valueValidators\": [\n          {\n            \"type\": \"NON_NEGATIVE_NUMBER\"\n          }\n        ]\n      }\n    ]\n  },\n  {\n    \"displayName\": \"Logs Settings\",\n    \"name\": \"logsGroup\",\n    \"groupStyle\": \"ZIPPY_CLOSED\",\n    \"type\": \"GROUP\",\n    \"subParams\": [\n      {\n        \"type\": \"RADIO\",\n        \"name\": \"logType\",\n        \"radioItems\": [\n          {\n            \"value\": \"no\",\n            \"displayValue\": \"Do not log\"\n          },\n          {\n            \"value\": \"debug\",\n            \"displayValue\": \"Log to console during debug and preview\"\n          },\n          {\n            \"value\": \"always\",\n            \"displayValue\": \"Always log to console\"\n          }\n        ],\n        \"simpleValueType\": true,\n        \"defaultValue\": \"debug\"\n      }\n    ]\n  }\n]\n\n\n___SANDBOXED_JS_FOR_SERVER___\n\nconst sendHttpRequest = require('sendHttpRequest');\nconst makeInteger = require('makeInteger');\nconst makeTableMap = require('makeTableMap');\nconst JSON = require('JSON');\nconst encodeUriComponent = require('encodeUriComponent');\nconst templateDataStorage = require('templateDataStorage');\nconst sha256Sync = require('sha256Sync');\nconst Promise = require('Promise');\nconst logToConsole = require('logToConsole');\nconst getRequestHeader = require('getRequestHeader');\nconst getContainerVersion = require('getContainerVersion');\nconst getTimestampMillis = require('getTimestampMillis');\n\nconst isLoggingEnabled = determinateIsLoggingEnabled();\nconst traceId = isLoggingEnabled ? getRequestHeader('trace-id') : undefined;\n\nlet requestHeaders = {};\nlet requestBody = {};\nconst version = '1.0.5';\n\nif (data.requestMethod !== 'GET') {\n  requestHeaders = data.requestType === 'json' ? { 'Content-Type': 'application/json' } : { 'Content-Type': 'application/x-www-form-urlencoded' };\n\n  if (data.data) {\n    let postBodyCustomData = data.simpleObject || data.requestType !== 'json' ? createSimpleObject() : createNestedObject();\n\n    for (let key in postBodyCustomData) {\n      requestBody[key] = postBodyCustomData[key];\n    }\n  }\n}\n\nif (data.headers) {\n  for (let key in data.headers) {\n    requestHeaders[data.headers[key].key] = data.headers[key].value;\n  }\n}\n\nif (data.insideArray && data.requestType === 'json') {\n  requestBody = [requestBody];\n}\n\nlet postBody = null;\nlet requestOptions = { headers: requestHeaders, method: data.requestMethod };\n\nif (data.requestMethod !== 'GET') {\n  if (data.requestType === 'json') {\n    postBody = JSON.stringify(requestBody);\n  }\n\n  if (data.requestType === 'form') {\n    let firstKey = true;\n    postBody = '';\n\n    for (let key in requestBody) {\n      if (firstKey) {\n        firstKey = false;\n      } else {\n        postBody += '&';\n      }\n\n      postBody += enc(key) + '=' + enc(requestBody[key]);\n    }\n  }\n}\n\nif (data.requestTimeout) {\n  requestOptions.timeout = makeInteger(data.requestTimeout);\n}\n\nreturn sendRequest(data.url, requestOptions, postBody).then(mapResponse);\n\nfunction sendRequest(url, requestOptions, postBody) {\n  let cacheKey = sha256Sync(version + url + JSON.stringify(requestOptions) + postBody + data.jsonParseKeyName);\n  let cacheTimeKey = cacheKey + '_timestamp';\n  let timeNow = getTimestampMillis();\n\n  if (data.storeResponse) {\n    let cachedBody = templateDataStorage.getItemCopy(cacheKey);\n    let cachedBodyTimestamp = templateDataStorage.getItemCopy(cacheTimeKey);\n    if (data.expirationTime) {\n      let expiratoinTimeSeconds = makeInteger(data.expirationTime) * 360000; // convert to miliseconds\n\n      if(cachedBodyTimestamp && (timeNow - makeInteger(cachedBodyTimestamp)) >= expiratoinTimeSeconds) {\n        cachedBody = '';\n        templateDataStorage.removeItem(cacheKey);\n        templateDataStorage.removeItem(cacheTimeKey);\n      }\n    }\n\n    if (cachedBody) return Promise.create((resolve) => resolve(cachedBody));\n  }\n  if (isLoggingEnabled) {\n    logToConsole(\n      JSON.stringify({\n        Name: 'HTTPLookup',\n        Type: 'Request',\n        TraceId: traceId,\n        EventName: 'HttpLookupRequest',\n        RequestMethod: data.requestMethod,\n        RequestUrl: url,\n        RequestBody: postBody,\n      })\n    );\n  }\n  return sendHttpRequest(url, requestOptions, postBody).then((successResult) => {\n    if (isLoggingEnabled) {\n      logToConsole(\n        JSON.stringify({\n          Name: 'HTTPLookup',\n          Type: 'Response',\n          TraceId: traceId,\n          EventName: 'HttpLookupRequest',\n          ResponseStatusCode: successResult.statusCode,\n          ResponseHeaders: successResult.headers,\n          ResponseBody: successResult.body,\n        })\n      );\n    }\n    if (successResult.statusCode === 301 || successResult.statusCode === 302) {\n      return sendRequest(successResult.headers.location, requestOptions, postBody);\n    }\n\n    if (data.storeResponse) {\n\n      templateDataStorage.setItemCopy(cacheKey, successResult.body);\n      templateDataStorage.setItemCopy(cacheTimeKey, timeNow);\n    }\n    return successResult.body;\n  });\n}\n\nfunction mapResponse(bodyString) {\n  if (!data.jsonParse) return bodyString;\n  const parsedBody = JSON.parse(bodyString);\n  return data.jsonParseKey ? parsedBody[data.jsonParseKeyName] : parsedBody;\n}\n\nfunction createSimpleObject() {\n  return makeTableMap(data.data, 'key', 'value');\n}\n\nfunction mergeObjects() {\n  let obj = {},\n    i = 0,\n    il = arguments.length,\n    key;\n  for (; i < il; i++) {\n    for (key in arguments[i]) {\n      if (arguments[i][key]) {\n        obj[key] = arguments[i][key];\n      }\n    }\n  }\n  return obj;\n}\n\nfunction createNestedObject() {\n  let object = {};\n\n  for (let key in data.data) {\n    let dotPath = data.data[key].key;\n    let rootProperty = dotPath.split('.')[0];\n    let strObj = strToObj(dotPath, data.data[key].value)[rootProperty];\n\n    if (object[rootProperty]) {\n      object[rootProperty] = mergeObjects(object[rootProperty], strObj);\n    } else {\n      object[rootProperty] = strObj;\n    }\n  }\n\n  return object;\n}\n\nfunction strToObj(dotPath, val) {\n  let i,\n    obj = {},\n    dotArr = dotPath.split('.');\n  let x = obj;\n\n  for (i = 0; i < dotArr.length - 1; i++) {\n    x = x[dotArr[i]] = {};\n  }\n\n  x[dotArr[i]] = val;\n\n  return obj;\n}\n\nfunction enc(data) {\n  data = data || '';\n  return encodeUriComponent(data);\n}\n\nfunction determinateIsLoggingEnabled() {\n  const containerVersion = getContainerVersion();\n  const isDebug = !!(containerVersion && (containerVersion.debugMode || containerVersion.previewMode));\n\n  if (!data.logType) {\n    return isDebug;\n  }\n\n  if (data.logType === 'no') {\n    return false;\n  }\n\n  if (data.logType === 'debug') {\n    return isDebug;\n  }\n\n  return data.logType === 'always';\n}\n\n\n___SERVER_PERMISSIONS___\n\n[\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"send_http\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"allowedUrls\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"any\"\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"access_template_storage\",\n        \"versionId\": \"1\"\n      },\n      \"param\": []\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"read_request\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"headerWhitelist\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"headerName\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"trace-id\"\n                  }\n                ]\n              }\n            ]\n          }\n        },\n        {\n          \"key\": \"headersAllowed\",\n          \"value\": {\n            \"type\": 8,\n            \"boolean\": true\n          }\n        },\n        {\n          \"key\": \"requestAccess\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"specific\"\n          }\n        },\n        {\n          \"key\": \"headerAccess\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"specific\"\n          }\n        },\n        {\n          \"key\": \"queryParameterAccess\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"any\"\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"logging\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"environments\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"all\"\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"read_container_data\",\n        \"versionId\": \"1\"\n      },\n      \"param\": []\n    },\n    \"isRequired\": true\n  }\n]\n\n\n___TESTS___\n\nscenarios: []\n\n\n___NOTES___\n\nCreated on 11/08/2022, 15:18:11\n\n\n",
+                "galleryReference": {
+                    "host": "github.com",
+                    "owner": "stape-io",
+                    "repository": "http-lookup-variable",
+                    "version": "76baffd7d844d1ee857e378ab6daca0cdf449470",
+                    "signature": "8f4fb39964753ca94ae8331009693a8cbfe37596f0401b02ced613ea0a14e87c"
+                }
+            },
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "templateId": "10",
+                "name": "Extract From JSON",
+                "fingerprint": "1734445269094",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"type\": \"MACRO\",\n  \"id\": \"cvt_temp_public_id\",\n  \"version\": 1,\n  \"securityGroups\": [],\n  \"displayName\": \"Extract From JSON\",\n  \"categories\": [\n    \"UTILITY\"\n  ],\n  \"description\": \"Extract element from JSON object or valid JSON string by path (using dot-notation)\",\n  \"containerContexts\": [\n    \"SERVER\"\n  ],\n  \"brand\": {\n    \"displayName\": \"mbaersch\",\n    \"id\": \"github.com_mbaersch\"\n  }\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"obj\",\n    \"displayName\": \"JSON Input\",\n    \"simpleValueType\": true,\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ],\n    \"alwaysInSummary\": true,\n    \"help\": \"Variable containing JSON object or valid JSON string\"\n  },\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"path\",\n    \"displayName\": \"Path to Element\",\n    \"simpleValueType\": true,\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ],\n    \"help\": \"Examples: products[0].price, propertyName, property.subProperty\",\n    \"alwaysInSummary\": true\n  },\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"stringify\",\n    \"checkboxText\": \"Convert Object Results to String\",\n    \"simpleValueType\": true\n  }\n]\n\n\n___SANDBOXED_JS_FOR_SERVER___\n\nconst JSON = require('JSON');\n\nvar path = data.path || \"\";\nvar obj = data.obj || {};\n\nif (typeof(obj) === \"string\") obj = JSON.parse(obj); \n \nvar res = path.split('.').reduce(function(o, k) {\n  var ind = k.indexOf('[');\n  var ind2 = k.indexOf(']');\n  if (ind >=0 && ind2 > ind) {\n    var kOrg = k;\n    k = kOrg.substring(0,ind);\n    var key = kOrg.substring(ind+1, ind2);\n    if (k != \"\")\n      return o && o[k][key];\n    else \n      return o && o[key];\n  } else return o && o[k];\n}, obj);\n\nif ((typeof(res) === \"object\") && data.stringify) res = JSON.stringify(res);\n\nreturn res;\n\n\n___TESTS___\n\nscenarios: []\n\n\n___NOTES___\n\nCreated on 19.9.2021, 00:58:59\n\n\n",
+                "galleryReference": {
+                    "host": "github.com",
+                    "owner": "mbaersch",
+                    "repository": "extract-json",
+                    "version": "120e1c6b615dd62a95c5a5416b420184298f623c",
+                    "signature": "f2948a5e03384cd9ccae445e7bc6662d8f2e4c1966dea72ab360066893ea1f30"
+                }
+            },
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "templateId": "16",
+                "name": "Data Client",
+                "fingerprint": "1734445269095",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"type\": \"CLIENT\",\n  \"id\": \"cvt_temp_public_id\",\n  \"version\": 1,\n  \"securityGroups\": [],\n  \"displayName\": \"Data Client\",\n  \"brand\": {\n    \"id\": \"brand_dummy\",\n    \"displayName\": \"Stape\",\n    \"thumbnail\": \"data:image/png;base64,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\"\n  },\n  \"description\": \"Use this Client as a mapper from Request Data to Event Data.\",\n  \"containerContexts\": [\n    \"SERVER\"\n  ]\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"exposeFPIDCookie\",\n    \"checkboxText\": \"Expose FPID Cookie\",\n    \"simpleValueType\": true,\n    \"help\": \"If enabled, the server only accessible FPID cookie, generated by UA/GA4 client, will be duplicated to FPIDP cookie, which will be accessible from the client JS. Highly recommend using this option only in case it is necessary.\"\n  },\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"generateClientId\",\n    \"checkboxText\": \"Always generate client_id parameter\",\n    \"simpleValueType\": true,\n    \"help\": \"If enabled, even if the `client_id` parameter will not be determined from the request, it will still be generated. The `client_id` parameter is required by UA/GA4 tags.\",\n    \"defaultValue\": true\n  },\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"prolongCookies\",\n    \"checkboxText\": \"Automatically prolong Data Tag cookies\",\n    \"simpleValueType\": true,\n    \"help\": \"If enabled, cookies generated by Data tag will be reseated from the server with an expiration time of two years. Useful if you use Data tag store functionality.\",\n    \"defaultValue\": true\n  },\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"acceptMultipleEvents\",\n    \"checkboxText\": \"Accept Multiple Events\",\n    \"simpleValueType\": true,\n    \"help\": \"When the Accept Multiple Events is set to true, the Data Client will parse an array of objects, in the request body, as separate events.\\nExample:\\n\\u003cbr /\\u003e\\n[\\n  {\\\"event\\\":\\\"page_view\\\"},\\n  {\\\"event\\\":\\\"view_item\\\"}\\n]\",\n    \"defaultValue\": false\n  },\n  {\n    \"type\": \"GROUP\",\n    \"name\": \"responseSettings\",\n    \"displayName\": \"Response Settings\",\n    \"groupStyle\": \"ZIPPY_CLOSED\",\n    \"subParams\": [\n      {\n        \"type\": \"SELECT\",\n        \"name\": \"responseStatusCode\",\n        \"displayName\": \"Response Status Code\",\n        \"selectItems\": [\n          {\n            \"value\": 200,\n            \"displayValue\": \"200\"\n          },\n          {\n            \"value\": 201,\n            \"displayValue\": \"201\"\n          },\n          {\n            \"value\": 301,\n            \"displayValue\": \"301\"\n          },\n          {\n            \"value\": 302,\n            \"displayValue\": \"302\"\n          },\n          {\n            \"value\": 403,\n            \"displayValue\": \"403\"\n          },\n          {\n            \"value\": 404,\n            \"displayValue\": \"404\"\n          }\n        ],\n        \"simpleValueType\": true,\n        \"defaultValue\": 200\n      },\n      {\n        \"type\": \"GROUP\",\n        \"name\": \"regularResponseSettings\",\n        \"groupStyle\": \"NO_ZIPPY\",\n        \"subParams\": [\n          {\n            \"type\": \"SELECT\",\n            \"name\": \"responseBody\",\n            \"displayName\": \"Response Body\",\n            \"macrosInSelect\": false,\n            \"selectItems\": [\n              {\n                \"value\": \"timestamp\",\n                \"displayValue\": \"JSON Object with timestamp (recommended)\"\n              },\n              {\n                \"value\": \"eventData\",\n                \"displayValue\": \"JSON Object with Event Data\"\n              },\n              {\n                \"value\": \"empty\",\n                \"displayValue\": \"Empty\"\n              }\n            ],\n            \"simpleValueType\": true,\n            \"defaultValue\": \"timestamp\"\n          },\n          {\n            \"type\": \"CHECKBOX\",\n            \"name\": \"responseBodyGet\",\n            \"checkboxText\": \"Send Response Body for GET request\",\n            \"simpleValueType\": true,\n            \"help\": \"By default, for the GET request type, the answer is image pixel.  \\u003ca target\\u003d\\\"_blank\\\" href\\u003d\\\"https://developers.google.com/tag-manager/serverside/api#setpixelresponse\\\"\\u003eMore Info\\u003c/a\\u003e.\"\n          }\n        ],\n        \"enablingConditions\": [\n          {\n            \"paramName\": \"responseStatusCode\",\n            \"paramValue\": 200,\n            \"type\": \"EQUALS\"\n          },\n          {\n            \"paramName\": \"responseStatusCode\",\n            \"paramValue\": 201,\n            \"type\": \"EQUALS\"\n          }\n        ]\n      },\n      {\n        \"type\": \"GROUP\",\n        \"name\": \"redirectResponseSettings\",\n        \"groupStyle\": \"NO_ZIPPY\",\n        \"subParams\": [\n          {\n            \"type\": \"TEXT\",\n            \"name\": \"redirectTo\",\n            \"displayName\": \"Redirect To\",\n            \"simpleValueType\": true,\n            \"valueValidators\": [\n              {\n                \"type\": \"NON_EMPTY\"\n              },\n              {\n                \"type\": \"REGEX\",\n                \"args\": [\n                  \"^https?:\\\\/\\\\/.*\"\n                ]\n              }\n            ]\n          },\n          {\n            \"type\": \"CHECKBOX\",\n            \"name\": \"lookupForRedirectToParam\",\n            \"checkboxText\": \"Try to find redirect destination in query params\",\n            \"simpleValueType\": true,\n            \"help\": \"Override destination URL with query param from request url\"\n          },\n          {\n            \"type\": \"TEXT\",\n            \"name\": \"redirectToQueryParamName\",\n            \"displayName\": \"Query Param Name\",\n            \"simpleValueType\": true,\n            \"enablingConditions\": [\n              {\n                \"paramName\": \"lookupForRedirectToParam\",\n                \"paramValue\": true,\n                \"type\": \"EQUALS\"\n              }\n            ],\n            \"valueValidators\": [\n              {\n                \"type\": \"NON_EMPTY\"\n              }\n            ]\n          }\n        ],\n        \"enablingConditions\": [\n          {\n            \"paramName\": \"responseStatusCode\",\n            \"paramValue\": 301,\n            \"type\": \"EQUALS\"\n          },\n          {\n            \"paramName\": \"responseStatusCode\",\n            \"paramValue\": 302,\n            \"type\": \"EQUALS\"\n          }\n        ]\n      },\n      {\n        \"type\": \"GROUP\",\n        \"name\": \"clientErrorResponseSettings\",\n        \"groupStyle\": \"NO_ZIPPY\",\n        \"subParams\": [\n          {\n            \"type\": \"TEXT\",\n            \"name\": \"clientErrorResponseMessage\",\n            \"displayName\": \"Client Error Response Message\",\n            \"simpleValueType\": true,\n            \"valueValidators\": [\n              {\n                \"type\": \"NON_EMPTY\"\n              }\n            ]\n          }\n        ],\n        \"enablingConditions\": [\n          {\n            \"paramName\": \"responseStatusCode\",\n            \"paramValue\": 403,\n            \"type\": \"EQUALS\"\n          },\n          {\n            \"paramName\": \"responseStatusCode\",\n            \"paramValue\": 404,\n            \"type\": \"EQUALS\"\n          }\n        ]\n      }\n    ]\n  },\n  {\n    \"type\": \"GROUP\",\n    \"name\": \"pathSettings\",\n    \"displayName\": \"Accepted Path Settings\",\n    \"groupStyle\": \"ZIPPY_CLOSED\",\n    \"subParams\": [\n      {\n        \"type\": \"SIMPLE_TABLE\",\n        \"name\": \"path\",\n        \"displayName\": \"Type additional paths that will be claimed by this client\",\n        \"simpleTableColumns\": [\n          {\n            \"defaultValue\": \"\",\n            \"displayName\": \"For example: /callback\",\n            \"name\": \"path\",\n            \"type\": \"TEXT\",\n            \"isUnique\": true,\n            \"valueValidators\": [\n              {\n                \"type\": \"NON_EMPTY\"\n              }\n            ]\n          }\n        ],\n        \"newRowButtonText\": \"Add path\",\n        \"help\": \"By default path \\u003cb\\u003e/data\\u003c/b\\u003e will be claimed. But you can add more paths that will be claimed by this client.\"\n      }\n    ]\n  }\n]\n\n\n___SANDBOXED_JS_FOR_SERVER___\n\nconst returnResponse = require('returnResponse');\nconst runContainer = require('runContainer');\nconst setResponseHeader = require('setResponseHeader');\nconst setResponseStatus = require('setResponseStatus');\nconst setResponseBody = require('setResponseBody');\nconst JSON = require('JSON');\nconst fromBase64 = require('fromBase64');\nconst getTimestampMillis = require('getTimestampMillis');\nconst getCookieValues = require('getCookieValues');\nconst getRequestBody = require('getRequestBody');\nconst getRequestMethod = require('getRequestMethod');\nconst getRequestHeader = require('getRequestHeader');\nconst getRequestPath = require('getRequestPath');\nconst getRequestQueryParameters = require('getRequestQueryParameters');\nconst makeInteger = require('makeInteger');\nconst getRemoteAddress = require('getRemoteAddress');\nconst setCookie = require('setCookie');\nconst setPixelResponse = require('setPixelResponse');\nconst generateRandom = require('generateRandom');\nconst computeEffectiveTldPlusOne = require('computeEffectiveTldPlusOne');\nconst getRequestQueryParameter = require('getRequestQueryParameter');\nconst getType = require('getType');\nconst Promise = require('Promise');\n\nconst requestMethod = getRequestMethod();\nconst path = getRequestPath();\nlet isClientUsed = false;\nlet isEventModelsWrappedInArray = false;\n\nif (path === '/data') {\n  runClient();\n}\n\nif (data.path && !isClientUsed) {\n  for (let key in data.path) {\n    if (!isClientUsed && data.path[key].path === path) {\n      runClient();\n    }\n  }\n}\n\nfunction runClient() {\n  isClientUsed = true;\n  require('claimRequest')();\n\n  if (requestMethod === 'OPTIONS') {\n    setResponseHeaders(200);\n    returnResponse();\n    return;\n  }\n  const baseEventModel = getBaseEventModelWithQueryParameters();\n  let eventModels = getEventModels(baseEventModel);\n  const clientId = getClientId(eventModels);\n  eventModels = eventModels.map((eventModel) => {\n    eventModel = addRequiredParametersToEventModel(eventModel);\n    eventModel = addCommonParametersToEventModel(eventModel);\n    eventModel = addClientIdToEventModel(eventModel, clientId);\n    return eventModel;\n  });\n\n  storeClientId(eventModels[0]);\n  exposeFPIDCookie(eventModels[0]);\n  prolongDataTagCookies(eventModels[0]);\n  const responseStatusCode = makeInteger(data.responseStatusCode);\n  setResponseHeaders(responseStatusCode);\n\n  Promise.all(\n    eventModels.map((eventModel) => {\n      return Promise.create((resolve) => {\n        runContainer(eventModel, resolve);\n      });\n    })\n  ).then(() => {\n    switch (responseStatusCode) {\n      case 200:\n      case 201:\n        if (requestMethod === 'POST' || data.responseBodyGet) {\n          prepareResponseBody(eventModels);\n        } else {\n          setPixelResponse();\n        }\n        break;\n      case 301:\n      case 302:\n        setRedirectLocation();\n        break;\n      case 403:\n      case 404:\n        setClientErrorResponseMessage();\n        break;\n    }\n\n    returnResponse();\n  });\n}\n\nfunction addCommonParametersToEventModel(eventModel) {\n  if (!eventModel.ip_override) {\n    if (eventModel.ip) eventModel.ip_override = eventModel.ip;\n    else if (eventModel.ipOverride)\n      eventModel.ip_override = eventModel.ipOverride;\n    else eventModel.ip_override = getRemoteAddress();\n  }\n\n  if (!eventModel.user_agent) {\n    if (eventModel.userAgent) eventModel.user_agent = eventModel.userAgent;\n    else if (getRequestHeader('User-Agent'))\n      eventModel.user_agent = getRequestHeader('User-Agent');\n  }\n\n  if (!eventModel.language) {\n    const acceptLanguageHeader = getRequestHeader('Accept-Language');\n\n    if (acceptLanguageHeader) {\n      eventModel.language = acceptLanguageHeader\n        .split(';')[0]\n        .substring(0, 2)\n        .toLowerCase();\n    }\n  }\n\n  if (!eventModel.page_hostname) {\n    if (eventModel.pageHostname)\n      eventModel.page_hostname = eventModel.pageHostname;\n    else if (eventModel.hostname)\n      eventModel.page_hostname = eventModel.hostname;\n  }\n\n  if (!eventModel.page_location) {\n    if (eventModel.pageLocation)\n      eventModel.page_location = eventModel.pageLocation;\n    else if (eventModel.url) eventModel.page_location = eventModel.url;\n    else if (eventModel.href) eventModel.page_location = eventModel.href;\n  }\n\n  if (!eventModel.page_referrer) {\n    if (eventModel.pageReferrer)\n      eventModel.page_referrer = eventModel.pageReferrer;\n    else if (eventModel.referrer)\n      eventModel.page_referrer = eventModel.referrer;\n    else if (eventModel.urlref) eventModel.page_referrer = eventModel.urlref;\n  }\n\n  if (!eventModel.value && eventModel.e_v) eventModel.value = eventModel.e_v;\n\n  if (getType(eventModel.items) === 'array' && eventModel.items.length) {\n    const firstItem = eventModel.items[0];\n    if (!eventModel.currency && firstItem.currency)\n      eventModel.currency = firstItem.currency;\n    if (eventModel.items.length === 1) {\n      if (!eventModel.item_id && firstItem.item_id)\n        eventModel.item_id = firstItem.item_id;\n      if (!eventModel.item_name && firstItem.item_name)\n        eventModel.item_name = firstItem.item_name;\n      if (!eventModel.item_brand && firstItem.item_brand)\n        eventModel.item_brand = firstItem.item_brand;\n      if (!eventModel.item_quantity && firstItem.quantity)\n        eventModel.item_quantity = firstItem.quantity;\n      if (!eventModel.item_category && firstItem.item_category)\n        eventModel.item_category = firstItem.item_category;\n      if (!eventModel.item_price && firstItem.price)\n        eventModel.item_price = firstItem.price;\n    }\n    if (!eventModel.value) {\n      const valueFromItems = eventModel.items.reduce((acc, item) => {\n        if (!item.price) return acc;\n        const quantity = item.quantity ? item.quantity : 1;\n        return acc + quantity * item.price;\n      }, 0);\n      if (valueFromItems) eventModel.value = valueFromItems;\n    }\n  }\n\n  const ecommerceAction = getEcommerceAction(eventModel);\n\n  if (ecommerceAction) {\n    if (!eventModel['x-ga-mp1-pa']) eventModel['x-ga-mp1-pa'] = ecommerceAction;\n\n    if (\n      ecommerceAction === 'purchase' &&\n      eventModel.ecommerce.purchase.actionField\n    ) {\n      if (!eventModel['x-ga-mp1-tr'])\n        eventModel['x-ga-mp1-tr'] =\n          eventModel.ecommerce.purchase.actionField.revenue;\n      if (!eventModel.revenue)\n        eventModel.revenue = eventModel.ecommerce.purchase.actionField.revenue;\n      if (!eventModel.affiliation)\n        eventModel.affiliation =\n          eventModel.ecommerce.purchase.actionField.affiliation;\n      if (!eventModel.tax)\n        eventModel.tax = eventModel.ecommerce.purchase.actionField.tax;\n      if (!eventModel.shipping)\n        eventModel.shipping =\n          eventModel.ecommerce.purchase.actionField.shipping;\n      if (!eventModel.coupon)\n        eventModel.coupon = eventModel.ecommerce.purchase.actionField.coupon;\n      if (!eventModel.transaction_id)\n        eventModel.transaction_id =\n          eventModel.ecommerce.purchase.actionField.id;\n    }\n  }\n\n  if (!eventModel.page_encoding && eventModel.pageEncoding)\n    eventModel.page_encoding = eventModel.pageEncoding;\n  if (!eventModel.page_path && eventModel.pagePath)\n    eventModel.page_path = eventModel.pagePath;\n  if (!eventModel.page_title && eventModel.pageTitle)\n    eventModel.page_title = eventModel.pageTitle;\n  if (!eventModel.screen_resolution && eventModel.screenResolution)\n    eventModel.screen_resolution = eventModel.screenResolution;\n  if (!eventModel.viewport_size && eventModel.viewportSize)\n    eventModel.viewport_size = eventModel.viewportSize;\n  if (!eventModel.user_id && eventModel.userId)\n    eventModel.user_id = eventModel.userId;\n\n  if (!eventModel.user_data) {\n    let userData = {};\n    let userAddressData = {};\n\n    if (!userData.email_address) {\n      if (eventModel.userEmail) userData.email_address = eventModel.userEmail;\n      else if (eventModel.email_address)\n        userData.email_address = eventModel.email_address;\n      else if (eventModel.email) userData.email_address = eventModel.email;\n      else if (eventModel.mail) userData.email_address = eventModel.mail;\n    }\n\n    if (!userData.phone_number) {\n      if (eventModel.userPhoneNumber)\n        userData.phone_number = eventModel.userPhoneNumber;\n      else if (eventModel.phone_number)\n        userData.phone_number = eventModel.phone_number;\n      else if (eventModel.phoneNumber)\n        userData.phone_number = eventModel.phoneNumber;\n      else if (eventModel.phone) userData.phone_number = eventModel.phone;\n    }\n\n    if (!userAddressData.street && eventModel.street)\n      userAddressData.street = eventModel.street;\n    if (!userAddressData.city && eventModel.city)\n      userAddressData.city = eventModel.city;\n    if (!userAddressData.region && eventModel.region)\n      userAddressData.region = eventModel.region;\n    if (!userAddressData.country && eventModel.country)\n      userAddressData.country = eventModel.country;\n\n    if (!userAddressData.first_name) {\n      if (eventModel.userFirstName)\n        userAddressData.first_name = eventModel.userFirstName;\n      else if (eventModel.first_name)\n        userAddressData.first_name = eventModel.first_name;\n      else if (eventModel.firstName)\n        userAddressData.first_name = eventModel.firstName;\n      else if (eventModel.name) userAddressData.first_name = eventModel.name;\n    }\n\n    if (!userAddressData.last_name) {\n      if (eventModel.userLastName)\n        userAddressData.last_name = eventModel.userLastName;\n      else if (eventModel.last_name)\n        userAddressData.last_name = eventModel.last_name;\n      else if (eventModel.lastName)\n        userAddressData.last_name = eventModel.lastName;\n      else if (eventModel.surname)\n        userAddressData.last_name = eventModel.surname;\n      else if (eventModel.family_name)\n        userAddressData.last_name = eventModel.family_name;\n      else if (eventModel.familyName)\n        userAddressData.last_name = eventModel.familyName;\n    }\n\n    if (!userAddressData.region) {\n      if (eventModel.region) userAddressData.region = eventModel.region;\n      else if (eventModel.state) userAddressData.region = eventModel.state;\n    }\n\n    if (!userAddressData.postal_code) {\n      if (eventModel.postal_code)\n        userAddressData.postal_code = eventModel.postal_code;\n      else if (eventModel.postalCode)\n        userAddressData.postal_code = eventModel.postalCode;\n      else if (eventModel.zip) userAddressData.postal_code = eventModel.zip;\n    }\n\n    if (getObjectLength(userAddressData) !== 0) {\n      userData.address = userAddressData;\n    }\n\n    if (!eventModel.user_data && getObjectLength(userData) !== 0) {\n      eventModel.user_data = userData;\n    }\n  }\n\n  return eventModel;\n}\n\nfunction getBaseEventModelWithQueryParameters() {\n  const requestQueryParameters = getRequestQueryParameters();\n  const eventModel = {};\n\n  if (requestQueryParameters) {\n    for (let queryParameterKey in requestQueryParameters) {\n      if (\n        (queryParameterKey === 'dtcd' || queryParameterKey === 'dtdc') &&\n        requestMethod === 'GET'\n      ) {\n        let dt =\n          queryParameterKey === 'dtcd'\n            ? JSON.parse(requestQueryParameters[queryParameterKey])\n            : JSON.parse(fromBase64(requestQueryParameters[queryParameterKey]));\n\n        for (let dtKey in dt) {\n          eventModel[dtKey] = dt[dtKey];\n        }\n      } else {\n        eventModel[queryParameterKey] =\n          requestQueryParameters[queryParameterKey];\n      }\n    }\n  }\n\n  return eventModel;\n}\n\nfunction addClientIdToEventModel(eventModel, clientId) {\n  eventModel.client_id = clientId;\n  return eventModel;\n}\n\nfunction prolongDataTagCookies(eventModel) {\n  if (data.prolongCookies) {\n    let stapeData = getCookieValues('stape');\n\n    if (stapeData.length) {\n      setCookie('stape', stapeData[0], {\n        domain: 'auto',\n        path: '/',\n        samesite: getCookieType(eventModel),\n        secure: true,\n        'max-age': 63072000, // 2 years\n        httpOnly: false,\n      });\n    }\n  }\n}\n\nfunction addRequiredParametersToEventModel(eventModel) {\n  if (!eventModel.event_name) {\n    let eventName = 'Data';\n\n    if (eventModel.eventName) eventName = eventModel.eventName;\n    else if (eventModel.event) eventName = eventModel.event;\n    else if (eventModel.e_n) eventName = eventModel.e_n;\n\n    eventModel.event_name = eventName;\n  }\n\n  return eventModel;\n}\n\nfunction exposeFPIDCookie(eventModel) {\n  if (data.exposeFPIDCookie) {\n    let fpid = getCookieValues('FPID');\n\n    if (fpid.length) {\n      setCookie('FPIDP', fpid[0], {\n        domain: 'auto',\n        path: '/',\n        samesite: getCookieType(eventModel),\n        secure: true,\n        'max-age': 63072000, // 2 years\n        httpOnly: false,\n      });\n    }\n  }\n}\n\nfunction storeClientId(eventModel) {\n  if (data.generateClientId) {\n    setCookie('_dcid', eventModel.client_id, {\n      domain: 'auto',\n      path: '/',\n      samesite: getCookieType(eventModel),\n      secure: true,\n      'max-age': 63072000, // 2 years\n      httpOnly: false,\n    });\n  }\n}\n\nfunction getObjectLength(object) {\n  let length = 0;\n\n  for (let key in object) {\n    if (object.hasOwnProperty(key)) {\n      ++length;\n    }\n  }\n  return length;\n}\n\nfunction setResponseHeaders(statusCode) {\n  setResponseHeader('Access-Control-Max-Age', '600');\n  setResponseHeader('Access-Control-Allow-Origin', getRequestHeader('origin'));\n  setResponseHeader(\n    'Access-Control-Allow-Methods',\n    'GET,POST,PUT,DELETE,OPTIONS'\n  );\n  setResponseHeader(\n    'Access-Control-Allow-Headers',\n    'content-type,set-cookie,x-robots-tag,x-gtm-server-preview,x-stape-preview'\n  );\n  setResponseHeader('Access-Control-Allow-Credentials', 'true');\n  setResponseStatus(statusCode);\n}\n\nfunction getCookieType(eventModel) {\n  if (!eventModel.page_location) {\n    return 'Lax';\n  }\n\n  const host = getRequestHeader('host');\n  const effectiveTldPlusOne = computeEffectiveTldPlusOne(\n    eventModel.page_location\n  );\n\n  if (!host || !effectiveTldPlusOne) {\n    return 'Lax';\n  }\n\n  if (host && host.indexOf(effectiveTldPlusOne) !== -1) {\n    return 'Lax';\n  }\n\n  return 'None';\n}\n\nfunction prepareResponseBody(eventModels) {\n  if (data.responseBody === 'empty') {\n    return;\n  }\n\n  const responseModel = isEventModelsWrappedInArray\n    ? eventModels[0]\n    : eventModels;\n\n  setResponseHeader('Content-Type', 'application/json');\n\n  if (data.responseBody === 'eventData') {\n    setResponseBody(JSON.stringify(responseModel));\n\n    return;\n  }\n\n  if (isEventModelsWrappedInArray) {\n    setResponseBody(\n      JSON.stringify({\n        timestamp: responseModel.timestamp,\n        unique_event_id: responseModel.unique_event_id,\n      })\n    );\n    return;\n  }\n\n  setResponseBody(\n    JSON.stringify(\n      eventModels.map((eventModel) => {\n        return {\n          timestamp: eventModel.timestamp,\n          unique_event_id: eventModel.unique_event_id,\n        };\n      })\n    )\n  );\n}\n\nfunction getEcommerceAction(eventModel) {\n  if (eventModel.ecommerce) {\n    const actions = [\n      'detail',\n      'click',\n      'add',\n      'remove',\n      'checkout',\n      'checkout_option',\n      'purchase',\n      'refund',\n    ];\n\n    for (let index = 0; index < actions.length; ++index) {\n      const action = actions[index];\n\n      if (eventModel.ecommerce[action]) {\n        return action;\n      }\n    }\n  }\n\n  return null;\n}\n\nfunction setRedirectLocation() {\n  let location = data.redirectTo;\n\n  if (data.lookupForRedirectToParam && data.redirectToQueryParamName) {\n    const param = getRequestQueryParameter(data.redirectToQueryParamName);\n    if (param && param.startsWith('http')) {\n      location = param;\n    }\n  }\n  setResponseHeaders('location', location);\n}\n\nfunction setClientErrorResponseMessage() {\n  if (data.clientErrorResponseMessage) {\n    setResponseBody(data.clientErrorResponseMessage);\n  }\n}\n\nfunction getEventModels(baseEventModel) {\n  const body = getRequestBody();\n\n  if (body) {\n    let bodyJson = JSON.parse(body);\n    if (bodyJson) {\n      const bodyType = getType(bodyJson);\n      const shouldUseOriginalBody =\n        data.acceptMultipleEvents && bodyType === 'array';\n      if (!shouldUseOriginalBody) {\n        bodyJson = [bodyJson];\n        isEventModelsWrappedInArray = true;\n      }\n\n      return bodyJson.map((bodyItem) => {\n        const eventModel = assign({}, baseEventModel, {\n          timestamp: makeInteger(getTimestampMillis() / 1000),\n          unique_event_id:\n            getTimestampMillis() + '_' + generateRandom(100000000, 999999999),\n        });\n        for (let bodyItemKey in bodyItem) {\n          eventModel[bodyItemKey] = bodyItem[bodyItemKey];\n        }\n        return eventModel;\n      });\n    }\n  }\n\n  return [\n    assign({}, baseEventModel, {\n      timestamp: makeInteger(getTimestampMillis() / 1000),\n      unique_event_id:\n        getTimestampMillis() + '_' + generateRandom(100000000, 999999999),\n    }),\n  ];\n}\n\nfunction getClientId(eventModels) {\n  for (let i = 0; i < eventModels.length; i++) {\n    const eventModel = eventModels[i];\n    const clientId =\n      eventModel.client_id || eventModel.data_client_id || eventModel._dcid;\n    if (clientId) return clientId;\n  }\n\n  const dcid = getCookieValues('_dcid');\n  if (dcid && dcid[0]) return dcid[0];\n\n  if (data.generateClientId) {\n    return (\n      'dcid.1.' +\n      getTimestampMillis() +\n      '.' +\n      generateRandom(100000000, 999999999)\n    );\n  }\n  return '';\n}\n\nfunction assign() {\n  const target = arguments[0];\n  for (let i = 1; i < arguments.length; i++) {\n    for (let key in arguments[i]) {\n      target[key] = arguments[i][key];\n    }\n  }\n  return target;\n}\n\n\n___SERVER_PERMISSIONS___\n\n[\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"return_response\",\n        \"versionId\": \"1\"\n      },\n      \"param\": []\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"access_response\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"writeResponseAccess\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"any\"\n          }\n        },\n        {\n          \"key\": \"writeHeaderAccess\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"specific\"\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"run_container\",\n        \"versionId\": \"1\"\n      },\n      \"param\": []\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"get_cookies\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"cookieAccess\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"specific\"\n          }\n        },\n        {\n          \"key\": \"cookieNames\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 1,\n                \"string\": \"stape\"\n              },\n              {\n                \"type\": 1,\n                \"string\": \"_dcid\"\n              },\n              {\n                \"type\": 1,\n                \"string\": \"FPIDP\"\n              },\n              {\n                \"type\": 1,\n                \"string\": \"FPID\"\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"read_request\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"requestAccess\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"any\"\n          }\n        },\n        {\n          \"key\": \"headerAccess\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"any\"\n          }\n        },\n        {\n          \"key\": \"queryParameterAccess\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"any\"\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"set_cookies\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"allowedCookies\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"name\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"domain\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"path\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"secure\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"session\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"stape\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"*\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"*\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"any\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"any\"\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"name\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"domain\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"path\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"secure\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"session\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"_dcid\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"*\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"*\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"any\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"any\"\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"name\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"domain\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"path\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"secure\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"session\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"FPIDP\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"*\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"*\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"any\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"any\"\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  }\n]\n\n\n___TESTS___\n\nscenarios: []\n\n\n___NOTES___\n\nCreated on 21/03/2021, 11:24:30\n\n\n"
+            }
+        ],
+        "client": [
+            {
+                "accountId": "6060323614",
+                "containerId": "202316062",
+                "clientId": "31",
+                "name": "Data Client",
+                "type": "cvt_202316062_16",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "responseStatusCode",
+                        "value": "200"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "generateClientId",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "prolongCookies",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "responseBody",
+                        "value": "timestamp"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "responseBodyGet",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "acceptMultipleEvents",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "exposeFPIDCookie",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1734786526383"
+            }
+        ]
+    }
+}
