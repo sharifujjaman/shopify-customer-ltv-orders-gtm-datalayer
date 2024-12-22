@@ -1,3 +1,13 @@
 # shopify-customer-ltv-orders-gtm-datalayer
 Shopify Customer LTV and Order Count Tracking for DataLayer &amp; GTM
 
+How to enable it:
+1. Enable DataLayer in Shopify
+2. Configure Server Side Tracking
+3. Create a custom app:
+    a. Click "Configure Admin API scopes"
+    b. Select read_customers, then click Save
+    c. Go to "API credentials", then install the app.
+    d. then "Reveal token once" copy the token "shpat_12345678"
+4. Create variables.
+5. Enjoy
