@@ -11,3 +11,7 @@ How to enable it:
     d. then "Reveal token once" copy the token "shpat_12345678"
 4. Create variables.
 5. Enjoy
+
+
+
+If you need total_spent or lifetime value returned as a number, import the Convert_to_Number_sGTM_template.tpl Variable Template into your Google Tag Manager Server Container and use it to convert the variable to a numeric type.
